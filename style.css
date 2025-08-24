@@ -1,0 +1,81 @@
+/* Background animation */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  background-size: 400% 400%;
+  animation: gradientShift 25s infinite alternate;
+}
+
+/* Animated gradient with multiple colors */
+@keyframes gradientShift {
+  0%   { background: linear-gradient(135deg, #ff6a00, #ee0979); }   /* orange → pink */
+  20%  { background: linear-gradient(135deg, #0072ff, #00c6ff); }   /* blue → cyan */
+  40%  { background: linear-gradient(135deg, #43e97b, #38f9d7); }   /* green → aqua */
+  60%  { background: linear-gradient(135deg, #f7971e, #ffd200); }   /* yellow → gold */
+  80%  { background: linear-gradient(135deg, #8e2de2, #4a00e0); }   /* purple → violet */
+  100% { background: linear-gradient(135deg, #ff512f, #dd2476); }   /* red → pink */
+}
+
+
+/* Music player box */
+.player {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+/* Title */
+.player h1 {
+  color: #0072ff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Album cover image */
+#cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 1s ease-in-out;   /* smooth fade */
+}
+
+
+/* Song title */
+#song-title {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Buttons */
+.controls {
+  margin-top: 15px;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
