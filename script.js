@@ -1,7 +1,10 @@
 const songs = [
   { title: "Song 1", src: "songs/song1.mp3", cover: "images/cover1.jpg" },
   { title: "Song 2", src: "songs/song2.mp3", cover: "images/cover2.jpg" },
-  { title: "Song 3", src: "songs/song3.mp3", cover: "images/cover3.jpg" }
+  { title: "Song 3", src: "songs/song3.mp3", cover: "images/cover3.jpg" },
+  { title: "Song 4", src: "songs/song4.mp3", cover: "images/cover4.jpg" },
+  { title: "Song 5", src: "songs/song5.mp3", cover: "images/cover5.jpg" },
+  { title: "Song 6", src: "songs/song6.mp3", cover: "images/cover6.jpg" }
 ];
 
 let currentSong = 0;
@@ -25,6 +28,12 @@ prevBtn.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", () => {
+  currentSong = (currentSong + 1) % songs.length;
+  loadSong(currentSong);
+});
+
+// Play next song automatically when one ends
+audio.addEventListener("ended", () => {
   currentSong = (currentSong + 1) % songs.length;
   loadSong(currentSong);
 });

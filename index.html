@@ -3,33 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beautiful Music Player</title>
+  <title>Music Player</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="player">
-    <h1>🎶 My Music Player 🎶</h1>
-
-    <!-- Album cover -->
-    <img id="cover" src="images/cover1.jpg" alt="cover" class="cover">
-
-    <!-- Song title -->
+    <img id="cover" src="images/cover1.jpg" alt="Song Cover">
     <h2 id="song-title">Song 1</h2>
-
-    <!-- Audio -->
-    <audio id="audio" controls>
-      <source src="songs/song1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <!-- Buttons -->
+    <audio id="audio" controls></audio>
     <div class="controls">
       <button id="prev">⏮ Prev</button>
       <button id="next">Next ⏭</button>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
